@@ -1,0 +1,117 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #103783, #9bafd9);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 60%;
+  height: fit-content;
+  min-height: 11rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: clamp(16px, 4vw, 32px);
+  padding: 2rem;
+  position: relative;
+}
+
+.container h1::after {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  width: 10rem;
+  height: 0.2rem;
+  transform: translateX(-50%);
+  background-color: #9bafd9;
+}
+.quote-box {
+  width: 100%;
+  height: 30rem;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.quote-box blockquote {
+  font-size: clamp(16px, 2vw, 36px);
+  margin-bottom: 3rem;
+}
+
+.quote-box blockquote::before,
+.quote-box blockquote::after {
+  content: "\201D";
+}
+
+.quote-box span {
+  display: block;
+  float: right;
+  margin-top: 7rem;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.quote-box span::before {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  top: 50%;
+  background-color: #000;
+  width: 1rem;
+  height: 0.2rem;
+  margin-right: 2rem;
+}
+
+.container .btn {
+  width: 100%;
+  height: 5rem;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn button {
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  color: #fff;
+  background-color: #226afa;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 0.3s ease;
+}
+
+@media (max-width: 400px) {
+  .quote-box span {
+    width: 100%;
+    margin: 1rem auto;
+  }
+  .quote-box span::before {
+    display: none;
+  }
+}
